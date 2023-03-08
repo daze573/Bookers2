@@ -41,7 +41,7 @@
         <tbody>
           <tr>
             <% @books.each do |book| %>
-              <td><%= image_tag 'sample-author1.jpg' %><a href="/users/:id"><%= current_user.name %></a></td>
+              <td><%= image_tag 'sample-author1.jpg' %></td>
               <td><a href="/books/:id"><%= book.title %></a></td>
               <td><%= book.body %></td>
             <% end %>
