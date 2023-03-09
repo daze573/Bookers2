@@ -16,7 +16,7 @@
   <a href="/users/:id/edit"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-user-cog"></i></button></a>
   <div>
     <h1>New book</h1>
-    <%= form_with model: book do |f| %>
+    <%= form_with model:book, lical:true do |f| %>
       <p>Title</p>
       <%= f.text_field :title %>
       <p>Opinion</p>
