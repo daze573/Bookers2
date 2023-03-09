@@ -1,7 +1,7 @@
 <div class="col-md-3">
   <h2>User info</h2>
   <table class="table">
-    <%= image_tag @book.user.get_profile_image(100,100) %>
+    <%= image_tag book.user.get_profile_image(100,100) %>
     <tbody>
       <tr>
         <th>name</th>
@@ -16,7 +16,7 @@
   <a href="/users/:id/edit"><button type="button" class="btn btn-outline-secondary"><i class="fas fa-user-cog"></i></button></a>
   <div>
     <h1>New book</h1>
-    <%= form_with model: @book do |f| %>
+    <%= form_with model: book do |f| %>
       <p>Title</p>
       <%= f.text_field :title %>
       <p>Opinion</p>
