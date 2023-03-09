@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <%= render 'books/info2', books: @books %>
+    <%= render 'books/info2', user: @user, book: @book %>
     <div class="col-md-8 offset-md-1">
       <h2>Books</h2>
       <table class="table table-hover table-inverse">
@@ -15,8 +15,12 @@
         <tbody>
           <tr>
             <td><%= image_tag @user.get_profile_image(100,100) %></td>
-            <%= link_to book_path(params[:id]) %>
-              <td><%= @book.title %></td>
+
+              <td>
+                <%= link_to book_path(params[:id]) do %>
+                  <%= @book.title %>
+                <% end %>
+              </td>
             <td><%= @book.body %></td>
           </tr>
         </tbody>
