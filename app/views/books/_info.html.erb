@@ -9,25 +9,25 @@
   <% end %>
   <h2>User info</h2>
   <table class="table">
-    <%= image_tag book.user.get_profile_image(100,100) %>
+    <%= image_tag user.get_profile_image(100,100) %>
     <tbody>
       <tr>
         <th>name</th>
-        <th><%= book.user.name %></th>
+        <th><%= user.name %></th>
       </tr>
       <tr>
         <th>introduction</th>
-        <th><%= book.user.introduction %></th>
+        <th><%= user.introduction %></th>
       </tr>
     </tbody>
   </table>
-  <%= link_to edit_user_path(book.user.id), class:"btn btn-outline-secondary btn-block" do %>
+  <%= link_to edit_user_path(user.id), class:"btn btn-outline-secondary btn-block" do %>
     <i class="fas fa-user-cog"></i>
   <% end %>
   <div>
     <h1>New book</h1>
     <div class="form-group">
-      <%= form_with model:book, lical:true do |f| %>
+      <%= form_with model: book do |f| %>
         <%= f.label :Title %><br>
         <%= f.text_field :title, class:"form-control" %><br>
         <%= f.label :Opinion %><br>
