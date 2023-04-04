@@ -64,4 +64,6 @@ gem "devise"
 
 gem "kaminari", "~>1.2.1"
 
+gem 'whenever', require: false
+
 gem "net-smtp"
